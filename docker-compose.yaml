@@ -5,6 +5,8 @@ services:
     build:
       context: ./src
       dockerfile: ./backend.Dockerfile
+    depends_on:
+      - postgres
   postgres:
     image: postgres:13.7-alpine
     ports:
